@@ -1,0 +1,124 @@
+POO -----
+
+programação estruturada
+	estrutura condicional
+		if else
+	estr de repetição
+		while for
+	funções e procedimentos
+
+
+POO
+	classes
+	herança
+	poliformismo
+	encapsulamento
+
+POO - aproximação do mundo real e virtual, interação entre objetos, atributos, códigos, métodos, entre outros.
+
+	ex:
+	real - carro físico
+	virtual - atributo: placa, marca etc
+		  método: abastecimento(dinamico)
+
+-- CLASSES
+OBJETOS - interagem uns cons outros
+	
+	virtual - CARRO A ; CARRO B; CARRO C
+	virtual - POSTO - abastece cada carro
+
+OBJETO - tem CLASSE; ATRIBUTOS; MÉTODOS
+	
+	CLASSE: molde de cada objeto = CARRO
+	ATRIBUTOS: variaveis de cada objeto = PLACA, MARCA, MODELO
+	MÉTODOS: função de cada objeto = LITROS DE COMBUSTIVEL; KM RODADO
+
+EM PYTHON
+	class Carro(): #classe'carro'
+		def __init__(self):
+			#atributos da classe
+			self.marca = none # atributo
+			self.modelo = none # atributo
+			self.placa = none # atributo
+			self.qdt_de_combustivel = 0
+
+CRIAR E MODIFICAR
+	my_car = Carro() #cria objeto
+	
+	my_car.marca = 'fiat'
+	my_car.modelo = 'uno'
+	my_car.placa = 'akdqiwdqw'
+	
+	print(my_car.marca)
+	print(my_car.modelo)
+	print(my_car.placa)
+
+MÉTODO - abastecer
+
+	class Carro(): #define a classe
+		def __init__(self):
+			#atributos da classe
+			self.marca = none # atributo
+			self.modelo = none # atributo
+			self.placa = none # atributo
+			self.qdt_de_combustivel = 0
+	
+		def abastecer(self, quantidade):
+			self.qdt_de_combustivel += quantidade
+
+CRIAR E MODIFICAR
+	my_car = Carro() #cria objeto
+	
+	my_car.marca = 'fiat'
+	my_car.modelo = 'uno'
+	my_car.placa = 'akdqiwdqw'
+	my_car.abastecer(10)
+	my_car.abastecer(4)
+	
+	print(my_car.marca)
+	print(my_car.modelo)
+	print(my_car.placa)
+	print(my_car.qdt_de_combustivel)
+
+
+--- HERANÇA
+	Derivada de outra classe
+
+	Classe B herda atributos e metodos da Classe A, mas A não necessariamente tem B.
+
+	ESTUDANTE - ATR: nome, email etc
+		    MET: avancar_semestre
+
+	ESTUDANTEDEGRADUAÇÃO - ESTUDANTE
+			       ATR: curso, modalidade
+
+	ESTUDANTEDEMESTRADO - ESTUDANTE
+			      ATR: programa, tema, bolsa
+
+EM PYTHON
+	class Estudante():
+		def __init__(self):
+			self.nome = none
+			self.email = none
+		def exibir(self):
+			print('Nome', self.nome)
+			print('Email', self.email)
+			
+	class EstudanteDeGrauacao(Estudante):
+		def __init__(self):
+			super().__init__()
+			self.curso = none
+			self.modalidade = none
+		def exibir(self):
+			print('Nome', self.nome)
+			print('Curso', self.curso)
+			print('Modalidade', self.modalidade)
+
+
+
+
+
+
+
+
+		
