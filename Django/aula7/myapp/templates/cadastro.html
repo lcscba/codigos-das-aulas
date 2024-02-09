@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% block title%} CADASTRO {%endblock%}
+{% block content%}
+{% comment %}
+    <form> {# action="{% url "lista_de_usuarios" %}" method="POST" #}
+
+        {% csrf_token %}
+      <div style="text-align:center;" class="container mt-5">
+        <h1>cadastro de usuarios</h1>
+        Nome <input class='form-control-sm' name='nome'type="text">
+        Idade <input class="form-control-sm" name='idade' type="text">
+        <button class="form-control-sm" type='submit'>Salvar</button>
+      </div>
+    </form>
+ {% endcomment %}
+    <form class='container mt-3'>
+      <div class='form-control bg-light mb-3'>
+        <label for='nome'>Nome</label>
+        <input class='container form-control' name='nome' type='text'>
+      </div>
+      <div class='form-control bg-light mb-3'>
+        <label for='nome'>Sobrenome</label>
+        <input class='container form-control' name='sobrenome' type='text'>
+      </div>
+      <button class='btn btn-secondary d-grid gap-2 d-md-block'type='submit'> Cadastrar</button>
+    </form>
+{% endblock%}
